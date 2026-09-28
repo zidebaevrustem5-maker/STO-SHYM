@@ -1,0 +1,279 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #222;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+}
+
+header {
+    background: #111;
+    color: white;
+    padding: 20px 0;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.phone {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+
+.hero h1 {
+    font-size: 48px;
+    line-height: 1.1;
+    margin-bottom: 25px;
+}
+
+.hero p {
+    max-width: 650px;
+    margin: 0 auto 30px;
+    font-size: 19px;
+}
+
+.button {
+    display: inline-block;
+    background: #e63946;
+    color: white;
+    text-decoration: none;
+    padding: 15px 28px;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+.whatsapp-button {
+    background: #25D366;
+}
+
+.whatsapp-button:hover {
+    opacity: 0.85;
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.services {
+    padding: 80px 0;
+}
+
+h2 {
+    text-align: center;
+    font-size: 34px;
+    margin-bottom: 40px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.card {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 30px;
+}
+
+.card h3 {
+    font-size: 23px;
+    margin-bottom: 15px;
+}
+
+.card p {
+    margin-bottom: 20px;
+}
+
+.card strong {
+    font-size: 20px;
+}
+
+.about {
+    background: #f5f5f5;
+    padding: 80px 0;
+}
+
+.advantages {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.advantages div {
+    display: flex;
+    flex-direction: column;
+}
+
+.advantages strong {
+    font-size: 35px;
+}
+
+.contact {
+    padding: 80px 0;
+    text-align: center;
+}
+
+.contact p {
+    margin-bottom: 25px;
+}
+
+footer {
+    background: #111;
+    color: white;
+    padding: 25px 0;
+    text-align: center;
+}
+
+@media (max-width: 700px) {
+
+    .header-content {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .hero {
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0.65),
+        rgba(0, 0, 0, 0.65)
+    );
+
+    background-color: #333;
+
+    color: white;
+    padding: 120px 0;
+    text-align: center;
+}
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .advantages {
+        flex-direction: column;
+        gap: 30px;
+    }
+}
+
+
+
+
+/* НОВЫЙ ВИД ГЛАВНОГО ЭКРАНА */
+
+section.hero {
+    background-image:
+        linear-gradient(
+            rgba(0, 0, 0, 0.65),
+            rgba(0, 0, 0, 0.65)
+        ),
+        url("https://images.unsplash.com/photo-1486006920555-c77dcf18193c?auto=format&fit=crop&w=1600&q=80");
+
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+
+    color: white !important;
+    padding: 120px 0 !important;
+    text-align: center !important;
+}
+
+section.hero h1 {
+    color: white !important;
+}
+
+section.hero p {
+    color: white !important;
+}
+
+section.hero .hero-badge {
+    color: white !important;
+}
+
+
+/* ===== НОВЫЕ КАРТОЧКИ УСЛУГ ===== */
+
+.services {
+    background: #f7f7f7;
+    padding: 90px 0;
+}
+
+.services h2 {
+    margin-bottom: 50px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.card {
+    background: white;
+    border: none;
+    border-radius: 14px;
+    padding: 35px 30px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.14);
+}
+
+.card h3 {
+    font-size: 24px;
+    margin-bottom: 18px;
+}
+
+.card p {
+    color: #555;
+    line-height: 1.7;
+}
+
+.card strong {
+    display: block;
+    margin-top: 25px;
+    font-size: 20px;
+    color: #e63946;
+}
+
+/* На телефоне карточки становятся друг под другом */
+
+@media (max-width: 700px) {
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .card {
+        padding: 28px 22px;
+    }
+}
